@@ -24,6 +24,10 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.section__title{
+  color:var(--primary-color);
+  font-weight:600;
+}
 
 h1,
 h2,

@@ -44,11 +44,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="nav__icons">
-
           <span className='fav__icon'><i className="ri-heart-line"></i>
-          <span className='badge'>1</span></span>
-          <span className='cart_icon'><i className="ri-shopping-bag-line"></i>
-          <span className='badge'>1</span></span>
+          <span className='badge'>9</span></span>
+          <span className='cart__icon'><i className="ri-shopping-bag-line"></i>
+          <span className='badge'>5</span></span>
           <span><motion.img whileTap={{scale:1.2}} src={userIcon} alt="userIcon" /></span>
         </div>
         <div className="mobile__menu">
