@@ -1,4 +1,5 @@
 .hero__section{
+    margin-top:25px;
     background:var(--hero-bg);
 }
 .hero__content h2{
@@ -47,4 +48,47 @@
 }
 .hero__content{
     padding:45px;
+}
+@media only screen and (max-width:992px){
+    .hero__content h2{
+        font-size:2rem;
+    }
+    .section__title{
+        font-size:1.4rem;
+    }
+    .counter__img{
+        display:none;
+    }
+    .clock__top-content{
+        text-align:center;
+    }
+    .clock__top-content h4{
+        font-size:0.9rem !important;
+    }
+    .clock__top-content h3{
+        font-size:1rem !important;
+    }
+    .count__down-col{
+        text-align:center;
+    }
+}
+@media only screen and (max-width:768px){
+    .hero__content h2{
+        font-size:1.6rem;
+    }
+    .hero__content p{
+        font-size:.9rem;
+    }
+    .buy__btn a{
+        font-size:.9rem;
+    }
+    .section__title{
+        font-size:1.4rem;
+    }
+}
+@media only screen and (max-width:576px){
+    .hero__content {
+        padding-top:0;
+        margin-bottom:40px;
+    }
 }

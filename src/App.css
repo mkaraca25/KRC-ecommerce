@@ -64,3 +64,8 @@ img{
 section{
   padding:60px 0px;
 }
+@media only screen and (max-width:768px){
+  .services_item{
+      padding:40px 0px;
+  }
+}
