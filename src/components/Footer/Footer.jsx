@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from '../../assets/images/eco-logo.png'
 import './footer.css'
-import {motion} from 'framer-motion'
 import { Container,Row,Col,ListGroup,ListGroupItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 const Footer = () => {
@@ -69,15 +68,15 @@ const Footer = () => {
             </h4>
             <ListGroup className='footer__contact'>
               <ListGroupItem  className='ps-0 border-0 d-flex align-items-center gap-2'>
-                <span><i class="ri-map-pin-line"></i></span>
+                <span><i className="ri-map-pin-line"></i></span>
                 <p>25700,Erzurum,Türkiye</p>
               </ListGroupItem>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
-                <span><i class="ri-phone-line"></i></span>
+                <span><i className="ri-phone-line"></i></span>
                 <p>+905395079658</p>
               </ListGroupItem>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
-              <span><i class="ri-mail-line"></i></span>
+              <span><i className="ri-mail-line"></i></span>
                 <p>melikkrc25@gmail.com</p>
               </ListGroupItem>
             </ListGroup>
