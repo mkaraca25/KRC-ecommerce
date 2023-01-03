@@ -15,7 +15,35 @@ const Shop = () => {
         (item)=>item.category==='sofa');
         setProductsData(filteredProducts);
     }
+    if(filterValue==='mobile'){
+      const filteredProducts = products.filter(
+        (item)=>item.category==='mobile');
+        setProductsData(filteredProducts);
+    }
+    if(filterValue==='chair'){
+      const filteredProducts = products.filter(
+        (item)=>item.category==='chair');
+        setProductsData(filteredProducts);
+    }
+    if(filterValue==='watch'){
+      const filteredProducts = products.filter(
+        (item)=>item.category==='watch');
+        setProductsData(filteredProducts);
+    }
+    if(filterValue==='wireless'){
+      const filteredProducts = products.filter(
+        (item)=>item.category==='wireless');
+        setProductsData(filteredProducts);
+    }
   }
+  const handleSearch=e=>{
+    const searchTerm = e.target.value;
+    const searchProducts=products.filter(item=>item.productName.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    setProductsData(searchProducts)
+  }
+
+
   return <Helmet title='Shop'>
     <CommonSection title='Products'/>
 
@@ -44,17 +72,17 @@ const Shop = () => {
         </Col>
         <Col lg='6' md='6'>
           <div className="search__box">
-            <input type="text" placeholder='Search...'/>
-            <span><i class="ri-search-line"></i></span>
+            <input type="text" placeholder='Search...' onChange={handleSearch}/>
+            <span><i className="ri-search-line"></i></span>
           </div>
         </Col>
       </Row>
     </Container>
-    <section>
+    <section className='pt-0'>
       <Container>
         <Row>
           {
-            productsData.length===0?<h1>No products are found!</h1> :<ProductsLists data={productsData}/>
+            productsData.length===0?<h1 className="text-center fs-4">No products are found!</h1 > :<ProductsLists data={productsData}/>
           }
         </Row>
       </Container>

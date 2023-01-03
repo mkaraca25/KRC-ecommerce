@@ -4,10 +4,11 @@
     background-size:cover;
     margin-top:28px;
     padding-top:10px 0px;
-    margin-bottom:50px;
+    margin-bottom:20px;
     display:flex;
     align-items:center;
     justify-content:center;
+    height:300px;
 }
 .common__section h1{
     color:#fff;
