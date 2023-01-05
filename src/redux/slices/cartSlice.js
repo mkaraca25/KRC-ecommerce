@@ -31,9 +31,20 @@ const cartSlice = createSlice({
         existingItem.quantity++;
         existingItem.totalPrice = Number(existingItem.totalPrice)+Number(newItem.price);
       }
-      state.totalAmount=state.cartItems.reduce((total, item) => total+Number(item.price)*Number(item.quantity));
+      state.totalAmount=state.cartItems.reduce((total, item) => total+Number(item.price)*Number(item.quantity),0);
     },
+    deleteItem:(state,action)=>{
+    const id=action.payload
+    const exisingItem=state.cartItems.find(item => item.id===id);
+    if(exisingItem){
+      state.cartItems=state.cartItems.filter(item => item.id !==id)
+      state.totalQuantity=state.totalQuantity-exisingItem.quantity
+    }
+    state.totalAmount=state.cartItems.reduce(
+      (total, item) => total+Number(item.price)*Number(item.quantity),0);
+  }
   },
+  
 });
 
 export const cartActions = cartSlice.actions;

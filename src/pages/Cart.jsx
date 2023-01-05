@@ -31,13 +31,7 @@ const Cart = () => {
             <tbody>
              {
               cartItems.map((item,index)=>(
-                <tr key={index}>
-                <td><img src={item.image} alt='Product'/></td>
-                <td>{item.productName}</td>
-                <td>${item.price}</td>
-                <td>{item.quantity}px</td>
-                <motion.td whileTap={{scale:1.1}}><i  class="ri-delete-bin-line"></i></motion.td>
-              </tr>
+                <Tr item={item} key={index}/>
               ))
              }
             </tbody>
@@ -53,5 +47,17 @@ const Cart = () => {
     </section>
   </Helmet>
 };
-
+const Tr=({item})=>{
+  const dispatch=useDispatch()
+  const deleteProduct=()=>{
+    dispatch(cartActions.deleteItem(item.id))
+  }
+  return <tr>
+  <td><img src={item.image} alt='Product'/></td>
+  <td>{item.productName}</td>
+  <td>${item.price}</td>
+  <td>{item.quantity}px</td>
+  <motion.td whileTap={{scale:1.1}} onClick={deleteProduct}><i  className="ri-delete-bin-line"></i></motion.td>
+</tr>
+}
 export default Cart;

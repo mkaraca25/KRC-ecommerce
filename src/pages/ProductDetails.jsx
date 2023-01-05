@@ -38,7 +38,7 @@ const submitHandler=(e) =>{
 const addToCart = () =>{
   dispatch(cartActions.addItem({
     id,
-    Image:imgUrl,
+    image:imgUrl,
     productName,
     price,
   }));
