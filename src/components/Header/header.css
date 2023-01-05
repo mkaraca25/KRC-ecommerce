@@ -54,9 +54,9 @@
 }
 .badge{
     position:absolute;
-    top:20%;
-    right:-30%;
-    width:15px;
+    top:15%;
+    right:-40%;
+    width:20px;
     height:15px;
     content:'';
     background:var(--primary-color);
